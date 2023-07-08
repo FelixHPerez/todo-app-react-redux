@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import tasksReducer from "../features/tasks/tasksSlice";
+import darkModeReducer from "../features/darkMode/darkModeSlice";
 import { loadState, saveState } from "../utils/localStorage";
 
 const persistedState = loadState();
@@ -7,6 +8,7 @@ const persistedState = loadState();
 export const store = configureStore({
   reducer: {
     tasks: tasksReducer,
+    darkMode: darkModeReducer,
   },
   preloadedState: persistedState,
 });
