@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 const CharacterCounter = ({
   className,
+  textColor,
   currentLength,
   maxLength,
   variants,
@@ -11,10 +12,10 @@ const CharacterCounter = ({
 }) => {
   const styles =
     currentLength >= maxLength - 15
-      ? "text-red-500"
+      ? "text-red-400/80"
       : currentLength >= maxLength - 30
-      ? "text-yellow-500"
-      : "text-stone-500";
+      ? "text-yellow-400/80"
+      : textColor;
 
   return (
     <motion.div

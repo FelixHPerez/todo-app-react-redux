@@ -40,7 +40,6 @@ const AddTaskForm = () => {
         checked: false,
       };
       dispatch(addTask(taskObj));
-      console.log("enviado");
     }
     setInputText("");
     setIsInputValid(false);
@@ -58,7 +57,7 @@ const AddTaskForm = () => {
       initial={{ opacity: 0, marginTop: "10rem" }}
       animate={{
         opacity: 1,
-        marginTop: !tasksList.length > 0 ? "10rem" : "7rem",
+        marginTop: tasksList.length > 0 ? "7rem" : "10rem",
       }}
       transition={{ type: "spring", duration: 0.5 }}
     >
@@ -90,6 +89,7 @@ const AddTaskForm = () => {
 
       <CharacterCounter
         className="absolute -z-50 ml-4 mt-1 text-[10px] tracking-tighter sm:text-xs"
+        textColor="text-black/50 dark:text-white/50"
         isInputFocused={isInputFocused}
         currentLength={inputText.length}
         maxLength={maxLength}
