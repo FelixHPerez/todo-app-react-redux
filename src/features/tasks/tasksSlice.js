@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const initialState = {
   tasksList: [],
-  maxLength: 120,
+  maxLength: 180,
 };
 
 const tasksSlice = createSlice({

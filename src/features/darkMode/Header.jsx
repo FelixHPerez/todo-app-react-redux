@@ -17,7 +17,7 @@ const Header = () => {
   }, [darkMode]);
 
   return (
-    <header className="fixed top-0 z-50 flex w-full min-w-min items-center justify-between border-b border-slate-900/10 px-4 py-2 backdrop-blur-md dark:border-slate-50/[0.06]">
+    <header className="fixed top-0 z-10 flex w-full min-w-min items-center justify-between border-b border-slate-900/10 px-4 py-2 backdrop-blur-md dark:border-slate-50/[0.06]">
       <h1 className="font-bold uppercase tracking-widest text-slate-900 dark:text-white">
         Tasks
       </h1>

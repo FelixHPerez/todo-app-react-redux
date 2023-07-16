@@ -14,5 +14,8 @@ export const store = configureStore({
 });
 
 store.subscribe(() => {
-  saveState(store.getState());
+  saveState({
+    tasks: store.getState().tasks,
+    darkMode: store.getState().darkMode,
+  });
 });

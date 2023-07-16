@@ -77,7 +77,7 @@ const AddTaskForm = () => {
         />
         <button
           type="submit"
-          className="absolute right-4 top-2/4 z-50 h-9 w-10 -translate-y-2/4 rounded-md bg-slate-500 duration-300 focus:outline focus:outline-1 focus:outline-blue-400 disabled:cursor-not-allowed disabled:bg-slate-400/50 dark:bg-white dark:disabled:bg-slate-500 sm:flex sm:w-24 sm:items-center sm:justify-around"
+          className="absolute right-4 top-2/4 h-9 w-10 -translate-y-2/4 rounded-md bg-slate-500 duration-300 disabled:cursor-not-allowed disabled:bg-slate-400/50 dark:bg-slate-300 dark:disabled:bg-slate-500 sm:flex sm:w-24 sm:items-center sm:justify-around"
           disabled={!isInputValid}
         >
           <code className="hidden text-xs tracking-widest sm:inline sm:text-sm">
@@ -88,7 +88,7 @@ const AddTaskForm = () => {
       </div>
 
       <CharacterCounter
-        className="absolute -z-50 ml-4 mt-1 text-[10px] tracking-tighter sm:text-xs"
+        className="absolute -left-2 -z-50 ml-4 mt-1 rounded-md bg-slate-200/80 px-1 text-[10px] tracking-normal dark:bg-slate-900/80 sm:text-xs"
         textColor="text-black/50 dark:text-white/50"
         isInputFocused={isInputFocused}
         currentLength={inputText.length}

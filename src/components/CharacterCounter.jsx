@@ -12,9 +12,9 @@ const CharacterCounter = ({
 }) => {
   const styles =
     currentLength >= maxLength - 15
-      ? "text-red-400/80"
+      ? "text-red-500/90"
       : currentLength >= maxLength - 30
-      ? "text-yellow-400/80"
+      ? "text-yellow-500/90"
       : textColor;
 
   return (
@@ -25,7 +25,7 @@ const CharacterCounter = ({
       animate={animate}
       transition={transition}
     >
-      {`${currentLength}/${maxLength}`}
+      {`${currentLength} / ${maxLength}`}
     </motion.div>
   );
 };
