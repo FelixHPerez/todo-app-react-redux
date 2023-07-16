@@ -1,17 +1,17 @@
 import { useSelector } from "react-redux";
-// import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import TaskItem from "./TaskItem";
 
 const TasksList = () => {
   const { tasksList } = useSelector((state) => state.tasks);
 
   return (
-    <ul className="grid gap-4">
-      {/* <AnimatePresence mode="popLayout"> */}
-      {tasksList.map((task) => (
-        <TaskItem key={task.id} task={task} />
-      ))}
-      {/* </AnimatePresence> */}
+    <ul>
+      <AnimatePresence mode="popLayout">
+        {tasksList.map((task) => (
+          <TaskItem key={task.id} task={task} />
+        ))}
+      </AnimatePresence>
     </ul>
   );
 };

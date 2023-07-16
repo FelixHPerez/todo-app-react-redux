@@ -42,7 +42,7 @@ const EditTaskModal = ({ editMode, setEditMode, task }) => {
           enter="ease-out duration-200"
           enterFrom="opacity-0"
           enterTo="opacity-100"
-          leave="ease-in duration-200"
+          leave="ease-in duration-300"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
@@ -53,12 +53,12 @@ const EditTaskModal = ({ editMode, setEditMode, task }) => {
         </Transition.Child>
         <Transition.Child
           as={Fragment}
-          enter="ease-out duration-200"
-          enterFrom="opacity-0 scale-95"
+          enter="ease-out duration-300"
+          enterFrom="opacity-0 scale-0"
           enterTo="opacity-100 scale-100"
           leave="ease-in duration-200"
           leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
+          leaveTo="opacity-0 scale-0"
         >
           <div className="fixed inset-0 flex items-center justify-center p-4">
             <Dialog.Panel className="relative rounded-2xl bg-slate-400/60 p-3 dark:bg-slate-900/80 sm:p-4">

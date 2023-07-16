@@ -2,21 +2,26 @@ import { forwardRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { removeTask, toggleChecked } from "./tasksSlice";
 import { Switch } from "@headlessui/react";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { CheckIcon, DeleteIcon, ModifyIcon } from "../../components/Icons";
 import EditTaskModal from "./EditTaskModal";
 
-// const addedTaskVariant = {
-//   hidden: {
-//     opacity: 0,
-//   },
-//   visible: {
-//     opacity: 1,
-//     transition: {
-//       duration: 0.5,
-//     },
-//   },
-// };
+const addedTaskVariant = {
+  hidden: {
+    scale: 0,
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 const TaskItem = forwardRef(({ task }, ref) => {
   const [editMode, setEditMode] = useState(false);
@@ -24,18 +29,18 @@ const TaskItem = forwardRef(({ task }, ref) => {
 
   return (
     <>
-      <div
-        className="relative"
+      <motion.div
+        className="relative mb-4"
         ref={ref}
-        //   layoutId={task.id}
-        //   variants={addedTaskVariant}
-        //   initial="hidden"
-        //   animate="visible"
-        //   exit="hidden"
+        layoutId={task.id}
+        variants={addedTaskVariant}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
       >
-        <li
-          className="grid gap-4 rounded-xl bg-slate-200/80 p-4 dark:bg-slate-900/80"
-          //   layout
+        <motion.li
+          className="grid gap-4 rounded-xl bg-slate-200/80 p-4 shadow-xl dark:bg-slate-900/80"
+          layout
         >
           <div className="flex items-center">
             <div className="mr-2 flex h-full items-center border-r border-slate-900/10 pr-2 dark:border-slate-50/[0.06]">
@@ -70,7 +75,7 @@ const TaskItem = forwardRef(({ task }, ref) => {
 
           <div className="flex items-center justify-center gap-5">
             <button
-              className="transition-[opacity, background-color] rounded-full bg-orange-400/70 px-4 py-1 duration-300 disabled:cursor-not-allowed disabled:bg-orange-300/60 hocus:bg-orange-400 dark:bg-orange-400 dark:disabled:bg-orange-300/30 dark:hocus:bg-orange-500"
+              className="transition-[opacity, background-color] rounded-full bg-orange-400/70 px-4 py-1 duration-300 disabled:cursor-not-allowed disabled:bg-orange-300/60 enabled:hocus:bg-orange-400 dark:bg-orange-400 dark:disabled:bg-orange-300/30 dark:enabled:hocus:bg-orange-500"
               onClick={() => setEditMode(true)}
               disabled={task.checked}
               aria-label={`Modify the task ${task.text}`}
@@ -89,8 +94,8 @@ const TaskItem = forwardRef(({ task }, ref) => {
               <DeleteIcon className="h-4 w-4" />
             </button>
           </div>
-        </li>
-      </div>
+        </motion.li>
+      </motion.div>
 
       <EditTaskModal
         editMode={editMode}

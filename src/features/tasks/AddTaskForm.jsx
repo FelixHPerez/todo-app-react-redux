@@ -77,7 +77,7 @@ const AddTaskForm = () => {
         />
         <button
           type="submit"
-          className="absolute right-4 top-2/4 h-9 w-10 -translate-y-2/4 rounded-md bg-slate-500 duration-300 disabled:cursor-not-allowed disabled:bg-slate-400/50 dark:bg-slate-300 dark:disabled:bg-slate-500 sm:flex sm:w-24 sm:items-center sm:justify-around"
+          className="absolute right-4 top-2/4 h-9 w-10 -translate-y-2/4 rounded-md bg-slate-500 duration-300 disabled:cursor-not-allowed disabled:bg-slate-400/50 enabled:hocus:bg-slate-600 dark:bg-slate-300 dark:disabled:bg-slate-500 dark:enabled:hocus:bg-slate-400 sm:flex sm:w-24 sm:items-center sm:justify-around"
           disabled={!isInputValid}
         >
           <code className="hidden text-xs tracking-widest sm:inline sm:text-sm">
