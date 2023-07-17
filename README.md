@@ -9,10 +9,10 @@ A simple todo app built with React and Redux Toolkit. It has basic features like
 ## Screenshots
 
 Light Mode
-[Screenshot of TASKS app - light mode](./TASKS-preview-light.png?raw=true)
+![Screenshot of TASKS app - light mode](./TASKS-preview-light.png?raw=true)
 
 Dark Mode
-[Screenshot of TASKS app - dark mode](./TASKS-preview-dark.png?raw=true)
+![Screenshot of TASKS app - dark mode](./TASKS-preview-dark.png?raw=true)
 
 ## Built with
 
