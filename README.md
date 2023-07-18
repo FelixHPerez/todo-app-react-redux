@@ -1,6 +1,6 @@
 # React Todo App
 
-A simple todo app built with React and Redux Toolkit. It has basic features like adding, removing and modifying tasks. It also has dark and light modes
+A simple todo app built with React and Redux Toolkit. It has basic features like adding, removing and modifying tasks. It also has dark and light modes and everything saves to localStorage.
 
 ## Link
 
